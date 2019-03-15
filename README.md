@@ -28,7 +28,7 @@ The Node class represents a generic ISY node. Your custom nodes will have to inh
 match the status and the controls that you have created in your nodedefs.
 
 ```javascript
-const Polyglot = require('polyinterface');
+const Polyglot = require('pgc_interface');
 
 module.exports = class MyNode extends Polyglot.Node {
 
@@ -183,7 +183,9 @@ you if this is a long poll or short poll.
 
 The following events are less commonly used but could be useful for troubleshooting:
 
-`message` is triggered for every messages received from Polyglot to the NodeServer.
+`messageReceived` is triggered for every messages received from Polyglot to the NodeServer.
+
+`messageSent` is triggered for every messages sent to Polyglot from your NodeServer.
 
 `mqttConnected` is the first event being triggered and happens when the MQTT connection is established. The config is
 not yet available.
@@ -205,7 +207,7 @@ start(), to initiate the MQTT connection and start communicating with Polyglot.
 
 stop(), will do a last short poll and long poll, then terminate the MQTT connection and stop.
 
-isConnected(), which tells you if this NodeServer and Polyglot are connected via MQTT.
+isConnected(), which tells you if this NodeServer is connected via MQTT.
 
 async addNode(node), which adds a new node to Polyglot. You fist need to instantiate a node using your custom class,
 which you then pass to addNode. This is an async function which allows you to "await" the result and verify if the
