@@ -173,6 +173,8 @@ poly.start();
 is passed in parameter. You can check for config.isInitialConfig to know if the is the first config received. Use this
 for initialization when you want to have a working config loaded.
 
+The config object will have a property newParamsDetected set to true if the customParams changed.
+
 `poll` is triggered frequently, based on your short poll and long poll values. The longPoll parameter is a flag telling
 you if this is a long poll or short poll.
 
@@ -213,6 +215,8 @@ async addNode(node), which adds a new node to Polyglot. You fist need to instant
 which you then pass to addNode. This is an async function which allows you to "await" the result and verify if the
 addNode was successful.
 
+getConfig(), Returns a copy of the last config received.
+
 getNodes(), gives you your list of nodes. This is not just an array of nodes returned by Polyglot. This is a list of
 nodes with your classes applied to them.
 
@@ -226,6 +230,8 @@ updateProfile(), sends the latest profile to ISY from the profile folder.
 getNotices(), gives you the current list of Polyglot notices.
 
 addNotice(key, text), adds a notice to the Polyglot UI. The key allows to refer to that notice later on.
+
+addNoticeTemp(key, text, delaySec), adds a notice to the Polyglot UI. The notice will be active for delaySec seconds.
 
 removeNotice(key), remove notice specified by the key.
 

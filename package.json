@@ -1,6 +1,6 @@
 {
   "name": "pgc_interface",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Polyglot Cloud interface for node.js node servers",
   "main": "index.js",
   "scripts": {
