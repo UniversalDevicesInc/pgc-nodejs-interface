@@ -112,6 +112,8 @@ this.reportDriver(driver, forceReport), to send existing driver value to ISY.
 
 this.reportDrivers(), To send existing driver values to ISY.
 
+this.reportCmd(), To run a command on this node on ISY. (Example DON)
+
 this.query(), which is called when we get a query request (Override this to fetch live data).
 
 this.status(), which is called when we get a status request for this node.
@@ -127,7 +129,7 @@ to interact with the NodeServer from the admin console or an ISY program.
 Please see the template for a complete example of a custom node and a controller node.
 
 ### The Interface class
-The Interface class is a singleton used to interact with Polyglot-v2 through MQTT.
+The Interface class is a singleton used to interact with Polyglot through MQTT.
 
 You first need to instantiate the interface by passing an array of node definitions that you have created.
 Once instantiated, you can use events triggered by the interface such as `config`, `poll` or `stop`.
@@ -214,6 +216,8 @@ isConnected(), which tells you if this NodeServer is connected via MQTT.
 async addNode(node), which adds a new node to Polyglot. You fist need to instantiate a node using your custom class,
 which you then pass to addNode. This is an async function which allows you to "await" the result and verify if the
 addNode was successful.
+
+getStage(), Returns either 'test' or 'prod', whether we are running on pgtest.isy.io or polyglot.isy.io. This is the STAGE environment variable.
 
 getConfig(), Returns a copy of the last config received.
 
