@@ -1,5 +1,9 @@
 # Change Log
 
+v1.0.6 (2019-05-27)
+* Interface: Fix to saveCustomParams 
+* Interface: Send disconnect status when stopping
+
 v1.0.5 (2019-05-26)
 * Node: Added method reportCmd(). This is used to initiate a command (such as DON) from the Nodeserver. 
 
