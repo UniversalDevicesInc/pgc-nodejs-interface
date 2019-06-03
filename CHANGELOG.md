@@ -1,7 +1,7 @@
 # Change Log
 
 v1.0.7 (2019-06-02)
-* Interface: reportDrivers now only update changed properties by default 
+* Interface: reportDrivers now only updates changed properties by default 
 
 v1.0.6 (2019-05-27)
 * Interface: Fix to saveCustomParams 
