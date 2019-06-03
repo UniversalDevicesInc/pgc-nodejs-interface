@@ -110,7 +110,7 @@ this.setDriver(driver, value, report=true, forceReport=false, uom=null), to set 
 
 this.reportDriver(driver, forceReport), to send existing driver value to ISY.
 
-this.reportDrivers(), To send existing driver values to ISY.
+this.reportDrivers(forceReport), To send changed driver values to ISY.
 
 this.reportCmd(), To run a command on this node on ISY. (Example DON)
 
