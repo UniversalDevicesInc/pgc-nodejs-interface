@@ -1,5 +1,8 @@
 # Change Log
 
+v1.0.8 (2019-06-27)
+* Interface: logger has been simplified. PGC now uses stdout only. 
+
 v1.0.7 (2019-06-02)
 * Interface: reportDrivers now only updates changed properties by default 
 
