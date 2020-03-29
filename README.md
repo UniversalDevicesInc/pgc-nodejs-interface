@@ -202,7 +202,7 @@ not yet available.
 
 `mqttEnd` the MQTT connection ended.
 
-`oauth` is triggered when the user has linked your Nodeserver. 
+`oauth` is triggered when the user has linked your Nodeserver.
 [Click here for more information on using oAuth](#Using-OAuth) with your Nodeserver.
 
 ##### The Interface class methods
@@ -228,6 +228,8 @@ getNode(address), gives you a single node.
 
 delNode(node), allows you to delete the node specified. You need to pass the actual node. Alternatively, you can use
 delNode() directly on the node itself, which has the same effect.
+
+updateProfileIfNew(), sends the latest profile to ISY from the profile folder if profile_version in server.json changes.
 
 updateProfile(), sends the latest profile to ISY from the profile folder.
 
@@ -318,8 +320,8 @@ For more information on using OAuth with your Nodeserver, [please see these inst
 
 ## Testing your Nodeserver
 
-We have created the ability to locally run your NodeServer on the 
-development platform. This gives you the ability to test and make sure 
+We have created the ability to locally run your NodeServer on the
+development platform. This gives you the ability to test and make sure
 everything is working properly before asking us to release it.
-[Please see these instructions](https://github.com/UniversalDevicesInc/pgc-python-interface/blob/master/README.md#testing-your-nodeserver). 
+[Please see these instructions](https://github.com/UniversalDevicesInc/pgc-python-interface/blob/master/README.md#testing-your-nodeserver).
 
