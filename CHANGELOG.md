@@ -1,5 +1,8 @@
 # Change Log
 
+v1.0.13 (2020-09-07)
+* Interface: Fixed primary node address
+
 v1.0.12 (2020-03-29)
 * Interface: Added updateProfileIfNew
 
